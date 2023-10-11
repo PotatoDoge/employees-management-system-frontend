@@ -15,3 +15,13 @@
 .action button {
   flex: 1;
 }
+
+::ng-deep .success-snackbar {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+::ng-deep .error-snackbar {
+  background-color: red;
+  color: #ffffff;
+}

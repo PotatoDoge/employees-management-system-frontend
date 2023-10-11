@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
 import { EmployeeModalServiceService } from '../employee-modal-service.service';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-employee-info-modal',
@@ -20,7 +21,8 @@ export class EmployeeInfoModalComponent {
   constructor(
     private _fb: FormBuilder,
     private employeeModalService: EmployeeModalServiceService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private snackBar: MatSnackBar
   ) {
     this.empForm = this._fb.group({
       firstName: '',
@@ -41,10 +43,19 @@ export class EmployeeInfoModalComponent {
       next: (response) => {
         console.log(response);
         this.dialog.closeAll();
+        this.openSnackBar('Employee created succesfully!', 'success-snackbar');
       },
       error: (error) => {
         console.log(error);
+        this.openSnackBar('Error!', 'error-snackbar');
       },
+    });
+  }
+
+  openSnackBar(message: string, snackbar_style: string) {
+    this.snackBar.open(message, '', {
+      duration: 2500,
+      panelClass: [snackbar_style],
     });
   }
 }
