@@ -11,7 +11,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./employee-info-modal.component.css'],
 })
 export class EmployeeInfoModalComponent {
-  // attributes inside this component
   color: ThemePalette = 'primary';
   checked = false;
   empForm: FormGroup;
@@ -33,7 +32,6 @@ export class EmployeeInfoModalComponent {
 
   onFormSubmit() {
     if (this.empForm.valid) {
-      console.log(this.empForm.value);
       this.createEmployee(this.empForm.value);
     }
   }

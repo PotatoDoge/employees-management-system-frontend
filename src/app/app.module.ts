@@ -16,9 +16,15 @@ import { EmployeeModalServiceService } from './employee-modal-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { EmployeesTableComponent } from './employees-table/employees-table.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [AppComponent, EmployeeInfoModalComponent],
+  providers: [EmployeeModalServiceService],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,8 +39,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ReactiveFormsModule,
     HttpClientModule,
     MatSnackBarModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule,
+    MatTableModule,
+    EmployeesTableComponent,
   ],
-  providers: [EmployeeModalServiceService],
-  bootstrap: [AppComponent],
 })
 export class AppModule {}
