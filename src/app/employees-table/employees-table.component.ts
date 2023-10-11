@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, OnInit } from '@angular/core';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule, SortDirection } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
@@ -6,10 +6,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgIf, DatePipe } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { EmployeeService } from '../employee-modal-service.service';
 
-/**
- * @title Table retrieving data through HTTP
- */
 @Component({
   selector: 'app-employees-table',
   templateUrl: './employees-table.component.html',
@@ -24,7 +22,7 @@ import { HttpClient } from '@angular/common/http';
     DatePipe,
   ],
 })
-export class EmployeesTableComponent implements AfterViewInit {
+export class EmployeesTableComponent implements OnInit {
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'role'];
   dataSource: Employee[] = [];
 
@@ -45,13 +43,13 @@ export class EmployeesTableComponent implements AfterViewInit {
         this.dataSource = data.data.employees;
         this.isLoadingResults = false;
       },
-      (error) => {
+      (error: any) => {
         console.log('Error:', error);
       }
     );
   }
 
-  ngAfterViewInit() {
+  ngOnInit() {
     this.getEmployees();
   }
 }
@@ -61,17 +59,4 @@ export interface Employee {
   firstName: string;
   lastName: string;
   role: string;
-}
-
-@Injectable({
-  providedIn: 'root',
-})
-export class EmployeeService {
-  private apiUrl = 'http://localhost:8080/v1/employees';
-
-  constructor(private http: HttpClient) {}
-
-  getEmployees() {
-    return this.http.get(this.apiUrl);
-  }
 }

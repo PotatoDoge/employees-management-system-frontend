@@ -12,18 +12,18 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ReactiveFormsModule } from '@angular/forms';
-import { EmployeeModalServiceService } from './employee-modal-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { EmployeesTableComponent } from './employees-table/employees-table.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import { EmployeeService } from './employee-modal-service.service';
 
 @NgModule({
   declarations: [AppComponent, EmployeeInfoModalComponent],
-  providers: [EmployeeModalServiceService],
+  providers: [EmployeeService],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,

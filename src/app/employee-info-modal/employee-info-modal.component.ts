@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
-import { EmployeeModalServiceService } from '../employee-modal-service.service';
+import { EmployeeService } from '../employee-modal-service.service';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -19,7 +19,7 @@ export class EmployeeInfoModalComponent {
 
   constructor(
     private _fb: FormBuilder,
-    private employeeModalService: EmployeeModalServiceService,
+    private employeeModalService: EmployeeService,
     private dialog: MatDialog,
     private snackBar: MatSnackBar
   ) {

@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
 })
-export class EmployeeModalServiceService {
+export class EmployeeService {
   private baseUrl = 'http://localhost:8080/v1/employees';
 
   constructor(private httpClient: HttpClient) {}
@@ -12,5 +12,9 @@ export class EmployeeModalServiceService {
   createEmployee(formData: any) {
     const url = `${this.baseUrl}`;
     return this.httpClient.post(url, formData);
+  }
+
+  getEmployees() {
+    return this.httpClient.get(this.baseUrl);
   }
 }
