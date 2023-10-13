@@ -1,11 +1,9 @@
-import { Component, ViewChild, AfterViewInit, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule, SortDirection } from '@angular/material/sort';
-import { MatTableModule } from '@angular/material/table';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgIf, DatePipe } from '@angular/common';
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { EmployeeService } from '../employee-modal-service.service';
 
 @Component({
@@ -24,33 +22,20 @@ import { EmployeeService } from '../employee-modal-service.service';
 })
 export class EmployeesTableComponent implements OnInit {
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'role'];
-  dataSource: Employee[] = [];
+  dataSource = new MatTableDataSource<Employee>([]);
 
   resultsLength = 0;
-  isLoadingResults = true;
+  isLoadingResults = false;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(
-    private _httpClient: HttpClient,
-    private employeeService: EmployeeService
-  ) {}
-
-  private getEmployees() {
-    this.employeeService.getEmployees().subscribe(
-      (data: any) => {
-        this.dataSource = data.data.employees;
-        this.isLoadingResults = false;
-      },
-      (error: any) => {
-        console.log('Error:', error);
-      }
-    );
-  }
+  constructor(private employeeService: EmployeeService) {}
 
   ngOnInit() {
-    this.getEmployees();
+    this.employeeService.getEmployeesFromComponent().subscribe((employees) => {
+      this.dataSource.data = employees;
+    });
   }
 }
 

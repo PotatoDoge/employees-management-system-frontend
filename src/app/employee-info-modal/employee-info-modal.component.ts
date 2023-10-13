@@ -38,8 +38,10 @@ export class EmployeeInfoModalComponent {
 
   private createEmployee(formData: any) {
     this.employeeModalService.createEmployee(formData).subscribe({
-      next: (response) => {
-        console.log(response);
+      next: (response: any) => {
+        this.employeeModalService.addEmployeeToComponent(
+          response.data.employee
+        );
         this.dialog.closeAll();
         this.openSnackBar('Employee created succesfully!', 'success-snackbar');
       },
@@ -56,4 +58,11 @@ export class EmployeeInfoModalComponent {
       panelClass: [snackbar_style],
     });
   }
+}
+
+export interface Employee {
+  id: string;
+  firstName: string;
+  lastName: string;
+  role: string;
 }
