@@ -20,9 +20,14 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { EmployeeService } from './employee-modal-service.service';
+import { BodyComponent } from './body/body.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ActionsComponent } from './actions/actions.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-  declarations: [AppComponent, EmployeeInfoModalComponent],
+  declarations: [AppComponent, EmployeeInfoModalComponent, BodyComponent, SidenavComponent, DashboardComponent, ActionsComponent],
   providers: [EmployeeService],
   bootstrap: [AppComponent],
   imports: [
@@ -43,6 +48,7 @@ import { EmployeeService } from './employee-modal-service.service';
     MatPaginatorModule,
     MatTableModule,
     EmployeesTableComponent,
+    FontAwesomeModule,
   ],
 })
 export class AppModule {}
