@@ -10,9 +10,22 @@ import { EmployeeInfoModalComponent } from './employee-info-modal/employee-info-
 export class AppComponent {
   title = 'employees-management-system-frontend';
 
+  isSideNavCollapsed = false;
+  screenWidth = 0;
+
   constructor(private _dialog: MatDialog) {}
 
   openEmployeeInfoModal() {
     this._dialog.open(EmployeeInfoModalComponent);
   }
+
+  onToggleSideNav(data: SidenavToggle) {
+    this.screenWidth = data.screenWidth;
+    this.isSideNavCollapsed = data.collapsed;
+  }
+}
+
+export interface SidenavToggle {
+  screenWidth: number;
+  collapsed: boolean;
 }
