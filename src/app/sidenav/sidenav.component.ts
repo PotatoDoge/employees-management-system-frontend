@@ -13,4 +13,12 @@ export class SidenavComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  changeSidenavState() {
+    this.collapsed = !this.collapsed;
+  }
+
+  closeSidenav() {
+    this.collapsed = false;
+  }
 }

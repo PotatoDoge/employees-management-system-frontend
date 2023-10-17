@@ -77,7 +77,8 @@
   height: 3rem;
   color: #f3f3f3;
   text-decoration: none;
-  transition: color 0.3s ease;
+  border-radius: 0.625rem;
+  transition: all 0.3s ease;
 }
 
 .sidenav-nav .sidenav-nav-item:hover .sidenav-nav-link {
