@@ -8,13 +8,15 @@ import { navbarData } from './nav-data';
 })
 export class SidenavComponent implements OnInit {
   @Output() onToggleSideNav: EventEmitter<SidenavToggle> = new EventEmitter();
-  collapsed = true;
+  collapsed = false;
   screenWidth = 0;
   navData = navbarData;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.screenWidth = window.innerWidth;
+  }
 
   changeSidenavState() {
     this.collapsed = !this.collapsed;

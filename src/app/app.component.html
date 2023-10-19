@@ -1,9 +1,14 @@
+<!--
 <mat-toolbar color="primary">
   <span>Employee Management System</span>
   <span class="example-spacer"></span>
   <button mat-raised-button (click)="openEmployeeInfoModal()">
     Add Employee
   </button>
-</mat-toolbar>
+  <app-employees-table></app-employees-table>
+</mat-toolbar>-->
 <app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
-<app-employees-table></app-employees-table>
+<app-body>
+  [collapsed]="isSideNavCollapsed"
+  [screenWidth]="screenWidth"
+</app-body>
