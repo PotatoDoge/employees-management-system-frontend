@@ -19,7 +19,7 @@ export class AppComponent {
     this._dialog.open(EmployeeInfoModalComponent);
   }
 
-  onToggleSideNav(data: SidenavToggle) {
+  onToggleSideNav(data: SidenavToggle): void {
     this.screenWidth = data.screenWidth;
     this.isSideNavCollapsed = data.collapsed;
   }
