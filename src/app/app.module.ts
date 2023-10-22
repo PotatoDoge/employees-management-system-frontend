@@ -25,9 +25,18 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ActionsComponent } from './actions/actions.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
-  declarations: [AppComponent, EmployeeInfoModalComponent, BodyComponent, SidenavComponent, DashboardComponent, ActionsComponent],
+  declarations: [
+    AppComponent,
+    EmployeeInfoModalComponent,
+    BodyComponent,
+    SidenavComponent,
+    DashboardComponent,
+    ActionsComponent,
+    SettingsComponent,
+  ],
   providers: [EmployeeService],
   bootstrap: [AppComponent],
   imports: [
