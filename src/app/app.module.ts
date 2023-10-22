@@ -26,6 +26,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ActionsComponent } from './actions/actions.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SettingsComponent } from './settings/settings.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { SettingsComponent } from './settings/settings.component';
     DashboardComponent,
     ActionsComponent,
     SettingsComponent,
+    HeaderComponent,
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent],
