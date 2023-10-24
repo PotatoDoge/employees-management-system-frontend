@@ -4,15 +4,40 @@
             <div class="search-container">
                 <div class="normal-search">
                     <input class="search" type="search" name="" id="" placeholder="Search...">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 </div>
             </div>
         </div>
         <div class="head-content-right">
             <div class="head-menu">
                 <div class="head-menu-item">
-                    <button class="head-menu-item-btn ripple"></button>
-                    <img [src]="'assets/flags/us.jpg'" class="flag" alt="flag">
+                    <button class="head-menu-item-btn ripple">
+                        <img [src]="'assets/flags/us.jpg'" class="flag" alt="flag">
+                    </button>
+
+                </div>
+                <div class="head-menu-item">
+                    <button class="head-menu-item-btn ripple">
+                        <i class="fa-solid fa-caret-down menu-icon"></i>
+                    </button>
+
+                </div>
+                <div class="head-menu-item">
+                    <button class="head-menu-item-btn ripple">
+                        <i class="fa-solid fa-bell menu-icon"></i>
+                    </button>
+
+                </div>
+                <div class="head-menu-item">
+                    <button class="head-menu-item-btn ripple">
+                        <i class="fa-solid fa-comment menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="head-user-avatar-container">
+                <div class="head-user-avatar">
+                    <img src="../../assets/user3.jpg" alt="" class="user-avatar">
+                    <div class="circle-indicator pulse"></div>
                 </div>
             </div>
         </div>
