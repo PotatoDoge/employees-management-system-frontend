@@ -1,1 +1,20 @@
-<p>header works!</p>
+<div class="head" [ngClass]="getHeadClass()">
+    <div class="head-content">
+        <div class="head-content-left">
+            <div class="search-container">
+                <div class="normal-search">
+                    <input class="search" type="search" name="" id="" placeholder="Search...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+        <div class="head-content-right">
+            <div class="head-menu">
+                <div class="head-menu-item">
+                    <button class="head-menu-item-btn ripple"></button>
+                    <img [src]="'assets/flags/us.jpg'" class="flag" alt="flag">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
