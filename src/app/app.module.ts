@@ -29,6 +29,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { HeaderComponent } from './header/header.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CdkMenuModule } from '@angular/cdk/menu';
+import { ExperimentComponent } from './experiment/experiment.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CdkMenuModule } from '@angular/cdk/menu';
     ActionsComponent,
     SettingsComponent,
     HeaderComponent,
+    ExperimentComponent,
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent],

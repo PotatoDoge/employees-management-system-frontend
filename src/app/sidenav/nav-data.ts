@@ -14,4 +14,9 @@ export const navbarData = [
     icon: 'fa-solid fa-gear',
     label: 'Settings',
   },
+  {
+    routeLink: 'testing',
+    icon: 'fa-solid fa-vials',
+    label: 'Testing',
+  },
 ];

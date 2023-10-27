@@ -35,6 +35,9 @@ export class HeaderComponent implements OnInit {
     } else {
       styleClass = 'head-md-screen';
     }
+    if (this.screenWidth < 500) {
+      console.log('TURN INTO BURGER');
+    }
     return styleClass;
   }
 
