@@ -27,6 +27,8 @@ import { ActionsComponent } from './actions/actions.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SettingsComponent } from './settings/settings.component';
 import { HeaderComponent } from './header/header.component';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkMenuModule } from '@angular/cdk/menu';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import { HeaderComponent } from './header/header.component';
     MatTableModule,
     EmployeesTableComponent,
     FontAwesomeModule,
+    OverlayModule,
+    CdkMenuModule,
   ],
 })
 export class AppModule {}
