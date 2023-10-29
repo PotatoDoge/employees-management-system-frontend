@@ -12,3 +12,7 @@
   padding: 10px;
   /* Add any additional styling you desire for the individual cards */
 }
+
+.card .card-body li {
+  list-style: none;
+}
