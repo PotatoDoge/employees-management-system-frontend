@@ -1,17 +1,18 @@
 <h1>Dashboard</h1>
 <div class="info-cards">
     <div class="card" *ngFor="let employee of dataSource.data">
-        <div class="card-head">Imagen principal de la propiedad</div>
+        <div class="card-head"><img [src]="getImage(employee.id)" class="fixed-size-image"></div>
         <div class="card-body">
             <ul>
-                <span class="card-property-name">
-                    <li>Here</li>
-                </span>
+
                 <span class="card-property-location">
-                    <li>Here</li>
+                    <li>Ubicación</li>
                 </span>
                 <span class="card-property-description">
-                    <li>Here</li>
+                    <li>Descripción breve</li>
+                </span>
+                <span class="card-property-description">
+                    <li>Botón para más detalles (precio, contacto, etc)</li>
                 </span>
             </ul>
         </div>
