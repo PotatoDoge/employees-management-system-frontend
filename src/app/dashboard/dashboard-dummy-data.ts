@@ -1,14 +1,14 @@
 export const house_images = [
   {
-    url: '../../assets/houses/casa.jpeg',
+    url: '../../assets/employees/employee1.jpeg',
   },
   {
-    url: '../../assets/houses/casa2.jpeg',
+    url: '../../assets/employees/employee2.png',
   },
   {
-    url: '../../assets/houses/casa3.jpeg',
+    url: '../../assets/employees/employee3.jpeg',
   },
   {
-    url: '../../assets/houses/casa4.jpg',
+    url: '../../assets/employees/employee4.png',
   },
 ];

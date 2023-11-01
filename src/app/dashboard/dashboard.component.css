@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
-    minmax(250px, 1fr)
+    minmax(190px, 1fr)
   ); /* Adjust the card width (150px) as needed */
   gap: 20px; /* Adjust the gap (space between cards) as needed */
 }
@@ -11,6 +11,10 @@
   border: 1px solid #ccc;
   padding: 10px;
   /* Add any additional styling you desire for the individual cards */
+}
+
+.card:hover {
+  border: 1px solid red;
 }
 
 .card .card-body li {

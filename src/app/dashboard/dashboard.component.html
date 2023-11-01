@@ -4,15 +4,14 @@
         <div class="card-head"><img [src]="getImage(employee.id)" class="fixed-size-image"></div>
         <div class="card-body">
             <ul>
-
                 <span class="card-property-location">
-                    <li>Ubicación</li>
+                    <li>ID: {{employee.id}}</li>
                 </span>
                 <span class="card-property-description">
-                    <li>Descripción breve</li>
+                    <li>Name: {{employee.firstName}}</li>
                 </span>
                 <span class="card-property-description">
-                    <li>Botón para más detalles (precio, contacto, etc)</li>
+                    <li>Last Name: {{employee.lastName}}</li>
                 </span>
             </ul>
         </div>
