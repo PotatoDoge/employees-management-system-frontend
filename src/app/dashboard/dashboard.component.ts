@@ -27,7 +27,10 @@ export class DashboardComponent implements OnInit {
     const randomValue = Math.floor(Math.random() * 3); // generate random number between 0 and 2
 
     const image_position = even_or_odd + randomValue; // add the random value and the remainder
-    console.log(this.imgs[image_position]);
     return this.imgs[image_position].url;
+  }
+
+  openCard(name: String): void {
+    console.log('Open: ' + name);
   }
 }

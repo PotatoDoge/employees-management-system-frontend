@@ -1,6 +1,6 @@
 <h1>Dashboard</h1>
 <div class="info-cards">
-    <div class="card" *ngFor="let employee of dataSource.data">
+    <div class="card" *ngFor="let employee of dataSource.data" (click)="openCard(employee.firstName)">
         <div class="card-head"><img [src]="getImage(employee.id)" class="fixed-size-image"></div>
         <div class="card-body">
             <ul>

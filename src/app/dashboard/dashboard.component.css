@@ -14,7 +14,7 @@
 }
 
 .card:hover {
-  border: 1px solid red;
+  border: 1px solid black;
 }
 
 .card .card-body li {
